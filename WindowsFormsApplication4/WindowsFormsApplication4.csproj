@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22221889-F4F4-426A-9672-539090B65F64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication4</RootNamespace>
+    <AssemblyName>WindowsFormsApplication4</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Pictures\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\..\Music\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>E:\ITP backup\isuru\temp\WindowsFormsApplication4\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="attendanceCheck.cs" />
+    <Compile Include="CircularProgressBar\CircularProgressBar.cs" />
+    <Compile Include="cost_Budget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cost_Budget.designer.cs">
+      <DependentUpon>cost_Budget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cost_incomeprofit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cost_incomeprofit.designer.cs">
+      <DependentUpon>cost_incomeprofit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cost_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cost_main.designer.cs">
+      <DependentUpon>cost_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cost_Pettycash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cost_Pettycash.designer.cs">
+      <DependentUpon>cost_Pettycash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cost_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cost_Report.designer.cs">
+      <DependentUpon>cost_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cust_Blueprints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cust_Blueprints.Designer.cs">
+      <DependentUpon>cust_Blueprints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cust_estimation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cust_estimation.Designer.cs">
+      <DependentUpon>cust_estimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cust_payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cust_payment.Designer.cs">
+      <DependentUpon>cust_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cust_Requests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cust_Requests.Designer.cs">
+      <DependentUpon>cust_Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="daily expenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="daily expenses.designer.cs">
+      <DependentUpon>daily expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="Database1.cs" />
+    <Compile Include="DBConnecton.cs" />
+    <Compile Include="eAttendenc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eAttendenc.Designer.cs">
+      <DependentUpon>eAttendenc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eloan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="eloan.Designer.cs">
+      <DependentUpon>eloan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employee_attendance.Designer.cs">
+      <DependentUpon>Employee_attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_details.Designer.cs">
+      <DependentUpon>employee_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_manage.designer.cs">
+      <DependentUpon>employee_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_main.Designer.cs">
+      <DependentUpon>emp_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ereport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ereport.Designer.cs">
+      <DependentUpon>ereport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="esalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="esalary.designer.cs">
+      <DependentUpon>esalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="icheckAvailability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="icheckAvailability.designer.cs">
+      <DependentUpon>icheckAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iDispatch Orders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="iDispatch Orders.designer.cs">
+      <DependentUpon>iDispatch Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_dashboard.designer.cs">
+      <DependentUpon>inventry_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_management_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventry_management_main.designer.cs">
+      <DependentUpon>inventry_management_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_orderdetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_orderdetails.designer.cs">
+      <DependentUpon>inventry_orderdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_rejectitems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_rejectitems.Designer.cs">
+      <DependentUpon>inventry_rejectitems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_report.designer.cs">
+      <DependentUpon>inventry_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_status.designer.cs">
+      <DependentUpon>inventry_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_storage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_storage.designer.cs">
+      <DependentUpon>inventry_storage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventry_update_stocks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventry_update_stocks.designer.cs">
+      <DependentUpon>inventry_update_stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jAll-Jobs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jAll-Jobs.Designer.cs">
+      <DependentUpon>jAll-Jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jassign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jassign.Designer.cs">
+      <DependentUpon>jassign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jcCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jcCost.Designer.cs">
+      <DependentUpon>jcCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jcost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jcost.Designer.cs">
+      <DependentUpon>jcost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jcurrentCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jcurrentCost.Designer.cs">
+      <DependentUpon>jcurrentCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jestimate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jestimate.Designer.cs">
+      <DependentUpon>jestimate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jnewjobs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jnewjobs.designer.cs">
+      <DependentUpon>jnewjobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="job_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="job_main.Designer.cs">
+      <DependentUpon>job_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jreports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jreports.Designer.cs">
+      <DependentUpon>jreports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jworker%27sdetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="jworker%27sdetails.Designer.cs">
+      <DependentUpon>jworker%27sdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintaine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintaine.Designer.cs">
+      <DependentUpon>Maintaine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mBlueprints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mBlueprints.designer.cs">
+      <DependentUpon>mBlueprints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mCustomerConf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mCustomerConf.Designer.cs">
+      <DependentUpon>mCustomerConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mEstimation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mEstimation.Designer.cs">
+      <DependentUpon>mEstimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mReminder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mReminder.Designer.cs">
+      <DependentUpon>mReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mRequest.Designer.cs">
+      <DependentUpon>mRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mreserve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mreserve.Designer.cs">
+      <DependentUpon>mreserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mTraining.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mTraining.Designer.cs">
+      <DependentUpon>mTraining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reports.designer.cs">
+      <DependentUpon>reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="suplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="suplier.designer.cs">
+      <DependentUpon>suplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplier_main.Designer.cs">
+      <DependentUpon>supplier_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sup_custom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sup_custom.designer.cs">
+      <DependentUpon>sup_custom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sup_notify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sup_notify.designer.cs">
+      <DependentUpon>sup_notify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sup_order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sup_order.designer.cs">
+      <DependentUpon>sup_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sup_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sup_report.designer.cs">
+      <DependentUpon>sup_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sup_ratings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sup_ratings.designer.cs">
+      <DependentUpon>sup_ratings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sup_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sup_View.designer.cs">
+      <DependentUpon>sup_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vcost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vcost.designer.cs">
+      <DependentUpon>vcost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vehicle_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vehicle_main.designer.cs">
+      <DependentUpon>vehicle_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vregister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vregister.designer.cs">
+      <DependentUpon>vregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vreport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vreport.designer.cs">
+      <DependentUpon>vreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vreserve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vreserve.designer.cs">
+      <DependentUpon>vreserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vsr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vsr.designer.cs">
+      <DependentUpon>vsr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vstatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vstatus.designer.cs">
+      <DependentUpon>vstatus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cost_Budget.resx">
+      <DependentUpon>cost_Budget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cost_incomeprofit.resx">
+      <DependentUpon>cost_incomeprofit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cost_main.resx">
+      <DependentUpon>cost_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cost_Pettycash.resx">
+      <DependentUpon>cost_Pettycash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cost_Report.resx">
+      <DependentUpon>cost_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cust_Blueprints.resx">
+      <DependentUpon>cust_Blueprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cust_estimation.resx">
+      <DependentUpon>cust_estimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cust_payment.resx">
+      <DependentUpon>cust_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cust_Requests.resx">
+      <DependentUpon>cust_Requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="daily expenses.resx">
+      <DependentUpon>daily expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eAttendenc.resx">
+      <DependentUpon>eAttendenc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eloan.resx">
+      <DependentUpon>eloan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_attendance.resx">
+      <DependentUpon>Employee_attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_details.resx">
+      <DependentUpon>employee_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_manage.resx">
+      <DependentUpon>employee_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_main.resx">
+      <DependentUpon>emp_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ereport.resx">
+      <DependentUpon>ereport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esalary.resx">
+      <DependentUpon>esalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icheckAvailability.resx">
+      <DependentUpon>icheckAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iDispatch Orders.resx">
+      <DependentUpon>iDispatch Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_dashboard.resx">
+      <DependentUpon>inventry_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_management_main.resx">
+      <DependentUpon>inventry_management_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_orderdetails.resx">
+      <DependentUpon>inventry_orderdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_rejectitems.resx">
+      <DependentUpon>inventry_rejectitems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_report.resx">
+      <DependentUpon>inventry_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_status.resx">
+      <DependentUpon>inventry_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_storage.resx">
+      <DependentUpon>inventry_storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventry_update_stocks.resx">
+      <DependentUpon>inventry_update_stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jAll-Jobs.resx">
+      <DependentUpon>jAll-Jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jassign.resx">
+      <DependentUpon>jassign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jcCost.resx">
+      <DependentUpon>jcCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jcost.resx">
+      <DependentUpon>jcost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jcurrentCost.resx">
+      <DependentUpon>jcurrentCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jestimate.resx">
+      <DependentUpon>jestimate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jnewjobs.resx">
+      <DependentUpon>jnewjobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="job_main.resx">
+      <DependentUpon>job_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jreports.resx">
+      <DependentUpon>jreports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jworker%27sdetails.resx">
+      <DependentUpon>jworker%27sdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintaine.resx">
+      <DependentUpon>Maintaine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mBlueprints.resx">
+      <DependentUpon>mBlueprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mCustomerConf.resx">
+      <DependentUpon>mCustomerConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mEstimation.resx">
+      <DependentUpon>mEstimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mReminder.resx">
+      <DependentUpon>mReminder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mRequest.resx">
+      <DependentUpon>mRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mreserve.resx">
+      <DependentUpon>mreserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mTraining.resx">
+      <DependentUpon>mTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports.resx">
+      <DependentUpon>reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suplier.resx">
+      <DependentUpon>suplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplier_main.resx">
+      <DependentUpon>supplier_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="sup_custom.resx">
+      <DependentUpon>sup_custom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sup_notify.resx">
+      <DependentUpon>sup_notify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sup_order.resx">
+      <DependentUpon>sup_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sup_report.resx">
+      <DependentUpon>sup_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sup_ratings.resx">
+      <DependentUpon>sup_ratings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sup_View.resx">
+      <DependentUpon>sup_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vcost.resx">
+      <DependentUpon>vcost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vehicle_main.resx">
+      <DependentUpon>vehicle_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vregister.resx">
+      <DependentUpon>vregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vreport.resx">
+      <DependentUpon>vreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vreserve.resx">
+      <DependentUpon>vreserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vsr.resx">
+      <DependentUpon>vsr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vstatus.resx">
+      <DependentUpon>vstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13435423_1192094944169019_2766351412128344260_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13435423_1192094944169019_2766351412128344260_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020739-rounded-glossy-black-icon-symbols-shapes-minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\383067-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Car-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Car-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Car Badge-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Vehicle Insurance-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Price Tag USD-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Car Service Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Combo Chart Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Pictures Folder Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Pictures Folder Filled-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Search Filled-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Calculator-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Calculator-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2017-05-12 at 3.48.21 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19437233_228224597688236_831909458187289062_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualEditor_-_Icon_-_Search-big.svg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Member-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Member-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Member-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Clear Symbol-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Contacts-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Delete Bin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Insert Table-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Notification-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Purchase Order-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Ratings-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Resume Template-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Table Properties-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-View Details-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualEditor_-_Icon_-_Close_-_white.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualEditor_-_Icon_-_Search-big.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-close-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Add Graph Report-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Available Updates-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Checked Checkbox-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-People Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Customer Support Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-New Job Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Documents Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Car Rental-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Employee Filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-User Groups-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Workers-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Workers-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Accounting-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Group Message-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Estimates Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Pricing-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Print Filled-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
