@@ -18,6 +18,8 @@ namespace WindowsFormsApplication4
         MySqlCommand command;
         MySqlDataReader mdr;
         String str;
+
+        //------------hjgvjhbj
         public jcCost()
         {
             InitializeComponent();
